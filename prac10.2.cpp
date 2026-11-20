@@ -21,27 +21,30 @@ union uni
     char c;
 }d;
 int main()
-{   st s;
-    str st;
+{   st A;
+    str B;
     /*unoptimized data where there is higher memory loss*/
-    cout<<sizeof(s.a)<<endl;
-    cout<<sizeof(s.b)<<endl;
-    cout<<sizeof(s.c)<<endl;
-    cout<<sizeof(s.e)<<endl;
-    cout<<sizeof(st)<<endl;
+    cout<<sizeof(A.a)<<endl;
+    cout<<sizeof(A.b)<<endl;
+    cout<<sizeof(A.c)<<endl;
+    cout<<sizeof(A.e)<<endl;
+    cout<<sizeof(A)<<endl;
     /*optimized data structure where there is less slag blocks*/
-    cout<<sizeof(st.a)<<endl;
-    cout<<sizeof(st.b)<<endl;
-    cout<<sizeof(st.c)<<endl;
-    cout<<sizeof(st.e)<<endl;
-    cout<<sizeof(str)<<endl;
+    cout<<sizeof(B.a)<<endl;
+    cout<<sizeof(B.b)<<endl;
+    cout<<sizeof(B.c)<<endl;
+    cout<<sizeof(B.e)<<endl;
+    cout<<sizeof(B)<<endl;
     /*unoin is also user defined datatype where the total memory consumption is same as the memory of highest datatype(in here double so 8 bytes).
     pros of union is that space complexity is less.cons is it can hold only one value at a time.when we take input of second variable the value of first data gets overwrite accordingly.
     so we can successfully retrive one value only.*/
     cout<<sizeof(uni)<<endl;
     cin>>d.a;
+    cout<<d.a;
     cin>>d.b;
+    cout<<d.b;
     cin>>d.c;
+    cout<<d.c;
     cout<<d.a<<" "<<d.b<<" "<<d.c<<" ";
 
 }
