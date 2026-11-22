@@ -4,6 +4,7 @@ void print1ton(int);
 int printnto1(int);
 int rev(int);
 int total(int);
+void binary(int);
 int main()
 {   int no,m;
     cin>>no;
@@ -12,6 +13,15 @@ int main()
     rev(no);
     m=total(no);
     cout<<m;
+    if(no==0)
+    {
+        cout<<0;
+    }
+    else
+    {
+        binary(no);
+    }
+        
 
 }
 /*function to print n to 1*/
@@ -54,4 +64,13 @@ int total(int n)
     return 0;
   }
   return (n%10)+total(n/10);
+}
+void binary(int n)
+{
+    if(n==0)
+    {
+        return;
+    }
+    binary(n/2);
+    cout<<no%2;
 }
