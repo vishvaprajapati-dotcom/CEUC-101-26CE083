@@ -1,6 +1,7 @@
 
 #include<iostream>
 using namespace std;
+void f1(int &);
 void f1();
 void f3(int,int);
 int f2();
@@ -14,6 +15,8 @@ int main()
     f3(c,a);
     b=f4(c,a);
     cout<<b;
+    f1(a);
+    cout<<a;
 }
 /*f1 is without argument and without return value.here we are not passing anything as parameter into thr function and not returning anything to main.here c will get printed and everything will get destroyed as soon as the function f1 is over*/
 void f1()
@@ -45,7 +48,12 @@ int f4(int x,int y)
     z=x+y;
     return z;
 }
-/*in every function the same thing addition of two numbers is done*/
+/*in every function the same thing addition of two numbers is done*/\
+void(int &S)
+{
+    S=10;
+}
+
 
 
 
