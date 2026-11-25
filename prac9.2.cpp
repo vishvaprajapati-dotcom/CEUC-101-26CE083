@@ -49,9 +49,36 @@ int main()
         cin.getline(*(enroll_id+i),8);
         cin.getline(*(name+i),30);
         cin.getline(*(branch+i),10);
-        cin>>(*(sem));
-        cin>>(*(per));
-        cin.getline(*(grade+i),3);
+        cin>>(*(sem+i));
+        cin>>(*(per+i));
+       if(*(per+i)>=90)
+        {
+            strcpy((*grade+i),"O");
+        }
+        else if(*(per+i)>=80)
+        {
+            strcpy((*grade+i),"A+");
+        }
+        else if(*(per+i)>=70)
+        {
+            strcpy((*grade+i),"A");
+        }
+        else if(*(per+i)>=60)
+        {
+            strcpy((*grade+i),"B+");
+        }
+        else if(*(per+i)>=50)
+        {
+            strcpy((*grade+i),"B");
+        }
+        else if(*(per+i)>=40)
+        {
+            strcpy((*grade+i),"C");
+        }
+        else
+        {
+            strcpy(*(grade+i),"F");
+        }
         display_stu_rec(no_of_stu,enroll_id,name,branch,sem,per,grade);
         cout<<"average percentage:"<<avg_per(no_of_stu,per)<<endl;
 
